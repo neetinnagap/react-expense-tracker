@@ -47,12 +47,20 @@ const ExpenseForm = (props) => {
         value={enterredDate}
         onChange={(e) => setEnterredDate(e.target.value)}
       />
-      <button
-        className="mb-4 w-72 text-lg font-bold uppercase tracking-wide  bg-gray-700 text-gray-100 px-3 py-2 rounded-sm hover:bg-gray-600"
-        type="submit"
-      >
-        Add Expense
-      </button>
+      <div className="flex">
+        <button
+          className="mb-4 mr-2 w-48 text-lg font-bold uppercase tracking-wide  bg-gray-700 text-gray-100 px-3 py-2 rounded-sm hover:bg-gray-600"
+          type="submit"
+        >
+          Add Expense
+        </button>
+        <button
+          className="mb-4 w-48 text-lg font-bold uppercase tracking-wide  bg-gray-700 text-gray-100 px-3 py-2 rounded-sm hover:bg-gray-600"
+          onClick={props.onCancelClick}
+        >
+          CANCEL
+        </button>
+      </div>
     </form>
   );
 };
